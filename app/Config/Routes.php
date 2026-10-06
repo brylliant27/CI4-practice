@@ -5,5 +5,5 @@ use App\Controllers\Pages;
 
 /** @var RouteCollection $routes */
 $routes->get('/', [Pages::class, 'view']);
-$routes->get('climate', 'Climate::index');
+$routes->get('climate', [Pages::class, 'climate']);
 $routes->get('(:segment)', [Pages::class, 'view']);
