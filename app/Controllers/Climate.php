@@ -14,16 +14,19 @@ class Climate extends BaseController
     public function climate()
     {
         $in     = $this->readInput();
-        $json   = null;
-        $error  = null;
-        $csvUrl = null;
+        $json    = null;
+        $error   = null;
+        $csvUrl  = null;
+        $jsonUrl = null;
 
         if (array_filter($in, static fn ($v) => $v !== null)) {
             [$data, $error] = $this->loadData($in);
 
             if ($data !== null) {
-                $json   = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-                $csvUrl = site_url('climate/csv') . '?' . http_build_query($in);
+                $json    = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+                $query   = '?' . http_build_query($in);
+                $csvUrl  = site_url('climate/csv') . $query;
+                $jsonUrl = site_url('climate/json') . $query;
             }
         }
 
@@ -35,6 +38,7 @@ class Climate extends BaseController
             'json'      => $json,
             'error'     => $error,
             'csvUrl'    => $csvUrl,
+            'jsonUrl'   => $jsonUrl,
         ]);
     }
 
@@ -70,15 +74,27 @@ class Climate extends BaseController
         $csv = stream_get_contents($out);
         fclose($out);
 
-        $filename = sprintf(
-            'climate_%s_%s_%s_%s.csv',
-            (float) $in['latitude'],
-            (float) $in['longitude'],
-            $in['start_date'],
-            $in['end_date']
+        return $this->response->download($this->filename($in, 'csv'), $csv, true);
+    }
+
+    public function jsonDownload()
+    {
+        $in = $this->readInput();
+        [$data, $error] = $this->loadData($in);
+
+        if ($data === null) {
+            return $this->response
+                ->setStatusCode(400)
+                ->setContentType('text/plain')
+                ->setBody($error ?? 'Missing parameters.');
+        }
+
+        $json = json_encode(
+            $this->toRecords($data),
+            JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES
         );
 
-        return $this->response->download($filename, $csv, true);
+        return $this->response->download($this->filename($in, 'json'), $json, true);
     }
 
     private function readInput(): array
@@ -130,5 +146,35 @@ class Climate extends BaseController
         }
 
         return [$data, null];
+    }
+
+    private function filename(array $in, string $extension): string
+    {
+        return sprintf(
+            'climate_%s_%s_%s_%s.%s',
+            (float) $in['latitude'],
+            (float) $in['longitude'],
+            $in['start_date'],
+            $in['end_date'],
+            $extension
+        );
+    }
+
+    /** Turns the column-oriented "daily" block into one object per day. */
+    private function toRecords(array $data): array
+    {
+        $columns = array_keys($data['daily_units']);
+        $daily   = $data['daily'];
+        $records = [];
+
+        foreach ($daily['time'] as $i => $time) {
+            $record = [];
+            foreach ($columns as $column) {
+                $record[$column] = $daily[$column][$i] ?? null;
+            }
+            $records[] = $record;
+        }
+
+        return $records;
     }
 }

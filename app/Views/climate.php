@@ -49,9 +49,10 @@
         <pre><?= esc($json) ?></pre>
     <?php endif; ?>
 
-    <?php if ($csvUrl): ?>
+    <?php if ($csvUrl && $jsonUrl): ?>
         <p>
             <a class="button" href="<?= esc($csvUrl, 'attr') ?>" download>Download CSV</a>
+            <a class="button" href="<?= esc($jsonUrl, 'attr') ?>" download>Download JSON</a>
         </p>
     <?php endif; ?>
 </body>
