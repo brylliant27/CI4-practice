@@ -10,6 +10,8 @@
         label { display: flex; flex-direction: column; font-size: .9rem; gap: .25rem; }
         .error { background: #fde8e8; color: #9b1c1c; padding: .75rem 1rem; border-radius: 6px; margin-top: 1rem; }
         pre { background: #f4f4f5; padding: 1rem; border-radius: 6px; overflow-x: auto; max-height: 500px; }
+        .button { display: inline-block; padding: .5rem 1rem; background: #2563eb; color: #fff;
+          border-radius: 6px; text-decoration: none; }
     </style>
 </head>
 <body>
@@ -45,6 +47,12 @@
 
     <?php if ($json): ?>
         <pre><?= esc($json) ?></pre>
+    <?php endif; ?>
+
+    <?php if ($csvUrl): ?>
+        <p>
+            <a class="button" href="<?= esc($csvUrl, 'attr') ?>" download>Download CSV</a>
+        </p>
     <?php endif; ?>
 </body>
 </html>
