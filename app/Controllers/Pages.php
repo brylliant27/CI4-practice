@@ -27,31 +27,46 @@ class Pages extends BaseController
 
     public function climate()
     {
+        $lat   = $this->request->getGet('latitude');
+        $lon   = $this->request->getGet('longitude');
         $start = $this->request->getGet('start_date');
         $end   = $this->request->getGet('end_date');
         $json  = null;
         $error = null;
 
-        // Only call the API once the form has been submitted
-        if ($start !== null || $end !== null) {
+        $submitted = $lat !== null || $lon !== null || $start !== null || $end !== null;
+
+        if ($submitted) {
             $rules = [
+                'latitude'   => 'required|decimal|greater_than_equal_to[-90]|less_than_equal_to[90]',
+                'longitude'  => 'required|decimal|greater_than_equal_to[-180]|less_than_equal_to[180]',
                 'start_date' => 'required|valid_date[Y-m-d]',
                 'end_date'   => 'required|valid_date[Y-m-d]',
             ];
 
-            if (! $this->validateData(['start_date' => $start, 'end_date' => $end], $rules)) {
+            $input = [
+                'latitude'   => $lat,
+                'longitude'  => $lon,
+                'start_date' => $start,
+                'end_date'   => $end,
+            ];
+
+            if (! $this->validateData($input, $rules)) {
                 $error = implode(' ', $this->validator->getErrors());
             } elseif ($end < $start) {
                 $error = 'The end date must not be before the start date.';
             } elseif ((new DateTime($start))->diff(new DateTime($end))->days >= self::MAX_DAYS) {
                 $error = 'Please choose a range of at most ' . self::MAX_DAYS . ' days.';
             } else {
+                $latF = (float) $lat;
+                $lonF = (float) $lon;
+
                 try {
-                    // One cache entry per date range, so repeated searches don't hit the API
+                    // The key includes coordinates, so each location/range is cached separately
                     $data = cache()->remember(
-                        'climate_' . md5($start . $end),
+                        'climate_' . md5("{$latF}|{$lonF}|{$start}|{$end}"),
                         DAY,
-                        static fn () => (new ClimateApi())->fetch(43.60, 1.44, $start, $end)
+                        static fn () => (new ClimateApi())->fetch($latF, $lonF, $start, $end)
                     );
 
                     $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
@@ -62,10 +77,12 @@ class Pages extends BaseController
         }
 
         return view('pages/climate', [
-            'start' => $start,
-            'end'   => $end,
-            'json'  => $json,
-            'error' => $error,
+            'latitude'  => $lat ?? '43.60',   // defaults to Toulouse on first visit
+            'longitude' => $lon ?? '1.44',
+            'start'     => $start,
+            'end'       => $end,
+            'json'      => $json,
+            'error'     => $error,
         ]);
     }
 }

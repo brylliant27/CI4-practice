@@ -8,6 +8,9 @@ class ClimateApi
 {
     private const URL = 'https://climate-api.open-meteo.com/v1/climate';
 
+    private const DAILY = 'temperature_2m_max,temperature_2m_mean,temperature_2m_min,'
+        . 'precipitation_sum,shortwave_radiation_sum,rain_sum,et0_fao_evapotranspiration_sum';
+
     public function fetch(
         float $latitude,
         float $longitude,
@@ -17,7 +20,8 @@ class ClimateApi
     ): array {
         $client = service('curlrequest', [
             'timeout'     => 15,
-            'http_errors' => false, // we handle status codes ourselves
+            'http_errors' => false,
+            'verify'      => env('CURL_CA_BUNDLE', true),
         ]);
 
         $response = $client->get(self::URL, [
@@ -27,7 +31,7 @@ class ClimateApi
                 'start_date' => $startDate,
                 'end_date'   => $endDate,
                 'models'     => $model,
-                'daily'      => 'temperature_2m_max,temperature_2m_min,precipitation_sum',
+                'daily'      => self::DAILY,
                 'timezone'   => 'Europe/Paris',
             ],
         ]);

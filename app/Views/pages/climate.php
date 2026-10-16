@@ -17,14 +17,24 @@
 
     <form method="get" action="<?= site_url('climate') ?>">
         <label>
+            Latitude
+            <input type="number" name="latitude" step="any" min="-90" max="90"
+                value="<?= esc($latitude) ?>" required>
+        </label>
+        <label>
+            Longitude
+            <input type="number" name="longitude" step="any" min="-180" max="180"
+                value="<?= esc($longitude) ?>" required>
+        </label>
+        <label>
             Start date
             <input type="date" name="start_date" value="<?= esc($start ?? '') ?>"
-                   min="1950-01-01" max="2050-12-31" required>
+                min="1950-01-01" max="2050-12-31" required>
         </label>
         <label>
             End date
             <input type="date" name="end_date" value="<?= esc($end ?? '') ?>"
-                   min="1950-01-01" max="2050-12-31" required>
+                min="1950-01-01" max="2050-12-31" required>
         </label>
         <button type="submit">Fetch</button>
     </form>
