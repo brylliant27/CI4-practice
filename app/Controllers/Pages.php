@@ -1,22 +1,18 @@
 <?php
 
 namespace App\Controllers;
-use CodeIgniter\Exceptions\PageNotFoundException;
 
+/** Pages d'information statiques. */
 class Pages extends BaseController
 {
-    public function view(string $page = 'home')
+    public function aPropos(): string
     {
-        if (! is_file(APPPATH . 'Views/pages/' . $page . '.php')) {
-            // Whoops, we don't have a page for that!
-            throw new PageNotFoundException($page);
-        }
-
-        $data['title'] = ucfirst($page); // Capitalize the first letter
-
-        return view('templates/header', $data)
-            . view('pages/' . $page)
-            . view('templates/footer');
+        return view('pages/a-propos');
     }
 
+    /** Mention d'information RGPD obligatoire (cf. Conception RGPD de l'équipe). */
+    public function donneesPersonnelles(): string
+    {
+        return view('pages/donnees-personnelles');
+    }
 }

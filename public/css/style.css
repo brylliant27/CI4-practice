@@ -1,0 +1,117 @@
+/* Climat & Cultures — feuille de style unique, sans dépendance. */
+:root {
+    --texte: #1d2a22;
+    --discret: #5b6b61;
+    --fond: #f4f6f2;
+    --carte: #ffffff;
+    --bord: #dde3dc;
+    --vert: #2f6b3a;
+    --vert-fonce: #224f2b;
+    --ref: #1f5fa8;   /* période de référence */
+    --fut: #c2571a;   /* horizon 2050 */
+    --alerte-fond: #fff4e0;
+    --alerte-bord: #e0a030;
+    --succes-fond: #e7f4ea;
+    --rayon: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--texte);
+    background: var(--fond);
+}
+
+a { color: var(--vert); }
+h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 .6rem; }
+h2 { font-size: 1.25rem; margin: 1.4rem 0 .5rem; }
+h3 { font-size: 1.05rem; margin: 1.2rem 0 .3rem; }
+.carte > h2:first-child { margin-top: 0; }
+
+.conteneur { max-width: 960px; margin: 0 auto; padding: 0 1rem; }
+
+/* En-tête et pied */
+.entete { background: var(--vert-fonce); color: #fff; }
+.entete-interieur { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; align-items: center; justify-content: space-between; padding-top: .8rem; padding-bottom: .8rem; }
+.entete a { color: #fff; text-decoration: none; }
+.entete nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+.entete nav a:hover, .entete nav a:focus { text-decoration: underline; }
+.marque { font-weight: 700; font-size: 1.15rem; }
+.pied { margin-top: 2rem; padding: 1rem 0 2rem; color: var(--discret); font-size: .9rem; border-top: 1px solid var(--bord); }
+.pied p { margin: .25rem 0; }
+
+main { padding-top: 1.5rem; }
+
+.carte {
+    background: var(--carte);
+    border: 1px solid var(--bord);
+    border-radius: var(--rayon);
+    padding: 1.2rem 1.4rem;
+    margin-bottom: 1.2rem;
+}
+.intro { font-size: 1.05rem; }
+.discret { color: var(--discret); font-size: .92rem; }
+
+/* Formulaires et boutons */
+.formulaire { display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-end; margin: 1rem 0 .5rem; }
+.formulaire label { display: flex; flex-direction: column; gap: .3rem; font-weight: 600; font-size: .95rem; }
+select, input { font: inherit; padding: .5rem .6rem; border: 1px solid #b8c3ba; border-radius: 6px; min-width: 14rem; background: #fff; }
+.bouton {
+    display: inline-block; font: inherit; font-weight: 600; cursor: pointer;
+    padding: .55rem 1.1rem; border-radius: 6px; border: 2px solid var(--vert);
+    background: var(--vert); color: #fff; text-decoration: none;
+}
+.bouton:hover, .bouton:focus { background: var(--vert-fonce); border-color: var(--vert-fonce); }
+.bouton.secondaire { background: #fff; color: var(--vert); }
+.bouton.secondaire:hover, .bouton.secondaire:focus { background: var(--succes-fond); }
+.actions { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; margin-top: .6rem; }
+.actions form { margin: 0; }
+:focus-visible { outline: 3px solid var(--fut); outline-offset: 2px; }
+
+/* Messages */
+.message { padding: .7rem 1rem; border-radius: 6px; border-left: 4px solid; }
+.message.alerte { background: var(--alerte-fond); border-color: var(--alerte-bord); }
+.message.succes { background: var(--succes-fond); border-color: var(--vert); }
+.etiquette { display: inline-block; background: #eef3ee; border: 1px solid var(--bord); border-radius: 999px; padding: .15rem .7rem; font-size: .92rem; }
+.verdict { font-size: 1.15rem; font-weight: 700; padding: .8rem 1rem; background: var(--succes-fond); border-radius: 6px; }
+.avertissement { background: var(--alerte-fond); border-color: var(--alerte-bord); }
+
+/* Légende des périodes */
+.pastille { display: inline-block; width: .8rem; height: .8rem; border-radius: 2px; margin: 0 .3rem 0 .15rem; vertical-align: -1px; }
+.pastille.ref, .barre.ref, .annuel-barre.ref { background: var(--ref); }
+.pastille.fut, .barre.fut, .annuel-barre.fut { background: var(--fut); }
+
+/* Barres des moyennes */
+.barres { display: grid; gap: .6rem; margin: 1rem 0; }
+.barre-ligne { display: grid; grid-template-columns: minmax(10rem, 16rem) 1fr 6rem; gap: .8rem; align-items: center; }
+.barre-fond { background: #edf0ec; border-radius: 4px; height: 1.6rem; overflow: hidden; }
+.barre { height: 100%; border-radius: 4px; min-width: 2px; }
+.barre-valeur { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Graphique année par année */
+.annuel { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1.2rem; }
+.annuel-serie { margin: 0; }
+.annuel-serie figcaption { font-weight: 600; margin-bottom: .3rem; }
+.annuel-trace { display: flex; align-items: flex-end; gap: 4px; height: 9rem; padding-bottom: 1.3rem; border-bottom: 1px solid var(--bord); }
+.annuel-colonne { flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; position: relative; }
+.annuel-barre { width: 100%; border-radius: 3px 3px 0 0; min-height: 1px; }
+.annuel-annee { position: absolute; bottom: -1.3rem; left: 0; right: 0; text-align: center; font-size: .75rem; color: var(--discret); }
+
+/* Tableaux */
+.tableau-defilant { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+th, td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid var(--bord); vertical-align: top; }
+thead th { background: #eef3ee; }
+td.nombre { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.sources dt { font-weight: 700; margin-top: .6rem; }
+.sources dd { margin: .1rem 0 0; }
+
+@media (max-width: 600px) {
+    .barre-ligne { grid-template-columns: 1fr; gap: .2rem; }
+    .barre-valeur { text-align: left; }
+    select, input { min-width: 0; width: 100%; }
+    .formulaire label { width: 100%; }
+}

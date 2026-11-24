@@ -11,10 +11,10 @@ class CommuneModel extends Model
     protected $primaryKey    = 'id_commune';
     protected $returnType    = 'array';
     protected $allowedFields = ['id_commune', 'nom', 'code_insee', 'latitude', 'longitude', 'altitude_m', 'zone_climatique'];
-    protected array $casts   = [
+    // latitude / longitude restent en texte (le cast float de CI4 refuse les entiers
+    // renvoyés par SQLite) : elles sont converties en nombres à l'appel de l'API.
+    protected array $casts = [
         'id_commune' => 'int',
-        'latitude'   => 'float',
-        'longitude'  => 'float',
         'altitude_m' => '?int',
     ];
 

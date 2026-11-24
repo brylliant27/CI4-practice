@@ -15,16 +15,11 @@ class CultureModel extends Model
         't_opt_min_c', 't_opt_max_c', 'besoin_eau_mm', 'source',
     ];
 
-    // Les seuils peuvent être absents (non sourcés) : on garde null plutôt que 0.
+    // Pas de cast « float » sur les seuils : MariaDB les renvoie en texte ("0.00") et
+    // SQLite en entier (0), ce que le cast float de CI4 refuse. Les seuils absents
+    // (non sourcés) restent null ; Indicateurs les convertit lui-même en nombres.
     protected array $casts = [
-        'id_culture'               => 'int',
-        't_base_c'                 => '?float',
-        'gdd_maturite_cj'          => '?float',
-        'seuil_gel_c'              => '?float',
-        'seuil_stress_thermique_c' => '?float',
-        't_opt_min_c'              => '?float',
-        't_opt_max_c'              => '?float',
-        'besoin_eau_mm'            => '?float',
+        'id_culture' => 'int',
     ];
 
     /** @return list<array<string, mixed>> */

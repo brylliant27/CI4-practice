@@ -2,6 +2,7 @@
 
 namespace Config;
 
+use App\Libraries\ClimateApi;
 use CodeIgniter\Config\BaseService;
 
 /**
@@ -29,4 +30,17 @@ class Services extends BaseService
      *     return new \CodeIgniter\Example();
      * }
      */
+
+    /**
+     * Client Open-Meteo. Déclaré comme service pour que les tests puissent le
+     * remplacer par un faux (Services::injectMock) et ne jamais appeler l'API.
+     */
+    public static function climateApi(bool $getShared = true): ClimateApi
+    {
+        if ($getShared) {
+            return static::getSharedInstance('climateApi');
+        }
+
+        return new ClimateApi();
+    }
 }

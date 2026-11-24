@@ -56,7 +56,7 @@ class ReferentielSeeder extends Seeder
         // Un seul modèle pour le sprint 1 : AUCUN indice de confiance n'est donc affiché.
         $modeles = [
             ['id_modele' => 1, 'code' => 'MRI_AGCM3_2_S', 'libelle' => 'MRI-AGCM3-2-S',
-                'institut' => 'Meteorological Research Institute (Japon)', 'resolution_km' => 20],
+                'institut' => 'Meteorological Research Institute, Japon', 'resolution_km' => 20],
         ];
 
         $this->db->table('dim_commune')->upsertBatch($communes);
@@ -64,7 +64,7 @@ class ReferentielSeeder extends Seeder
         $this->db->table('dim_temps')->upsertBatch($temps);
         $this->db->table('dim_modele')->upsertBatch($modeles);
 
-        if (is_cli()) {
+        if (is_cli() && ENVIRONMENT !== 'testing') {
             echo count($communes) . ' communes, ' . count($cultures) . ' cultures, '
                 . count($temps) . ' horizons, ' . count($modeles) . " modèle(s).\n";
         }
