@@ -1,0 +1,11 @@
+﻿id_culture,nom,t_base_c,gdd_maturite_cj,seuil_gel_c,besoin_eau_mm,t_opt_min_c,t_opt_max_c,seuil_stress_thermique_c,source
+1,Blé tendre hiver,0,2150,-4,500,15,22,30,Arvalis (t_base vérifiée) - gdd et autres a_completer
+2,Orge hiver,0,1900,-5,450,12,20,30,a_completer
+3,Colza hiver,5,2200,-5,450,12,22,27,a_completer
+4,Maïs grain,6,1600,0,600,20,30,35,Arvalis (t_base et gdd vérifiés) - autres a_completer
+5,Tournesol,6,1550,-1,500,20,28,34,a_completer
+6,Soja,10,1500,0,550,20,30,35,a_completer
+7,Betterave sucrière,3,2400,-4,650,18,22,30,a_completer
+8,Pomme de terre,7,1500,-2,600,15,20,28,a_completer
+9,Vigne (raisin de cuve),10,1300,-2,400,25,30,35,IFV/INRAE (seuil_gel vérifié) - autres a_completer
+10,Olivier,10,,-8,300,25,32,40,a_completer

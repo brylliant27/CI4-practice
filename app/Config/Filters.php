@@ -78,7 +78,7 @@ class Filters extends BaseFilters
         ],
         'after' => [
             // 'honeypot',
-            // 'secureheaders',
+            'secureheaders',
         ],
     ];
 
@@ -95,7 +95,10 @@ class Filters extends BaseFilters
      *
      * @var array<string, list<string>>
      */
-    public array $methods = [];
+    public array $methods = [
+        // Tout formulaire POST (ex. « Effacer mes données ») doit porter le jeton CSRF.
+        'POST' => ['csrf'],
+    ];
 
     /**
      * List of filter aliases that should run on any
