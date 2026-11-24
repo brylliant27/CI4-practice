@@ -1,0 +1,3316 @@
+{
+    "contrat": {
+        "version": "1.0",
+        "date": "2026-11-24",
+        "documentation": "docs/contrat-interface.md"
+    },
+    "source": {
+        "api": "Open-Meteo Climate API",
+        "url": "https://climate-api.open-meteo.com/v1/climate",
+        "modele": "MRI_AGCM3_2_S",
+        "extrait_le": "2026-11-24"
+    },
+    "commune": {
+        "id_commune": 13,
+        "nom": "Toulouse",
+        "code_insee": "31555",
+        "latitude": 43.6,
+        "longitude": 1.44
+    },
+    "unites": {
+        "id_commune": "identifiant (dim_commune)",
+        "date": "AAAA-MM-JJ",
+        "t_min": "°C",
+        "t_max": "°C",
+        "t_moy": "°C",
+        "precip": "mm/jour",
+        "et0": "mm/jour"
+    },
+    "series": [
+        {
+            "id_commune": 13,
+            "date": "2015-01-01",
+            "t_min": -0.1,
+            "t_max": 7.0,
+            "t_moy": 3.1,
+            "precip": 0.0,
+            "et0": 2.01
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-02",
+            "t_min": 1.4,
+            "t_max": 10.8,
+            "t_moy": 4.3,
+            "precip": 0.0,
+            "et0": 2.22
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-03",
+            "t_min": 1.9,
+            "t_max": 11.4,
+            "t_moy": 5.1,
+            "precip": 0.0,
+            "et0": 2.2
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-04",
+            "t_min": 1.6,
+            "t_max": 10.6,
+            "t_moy": 5.0,
+            "precip": 0.0,
+            "et0": 1.94
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-05",
+            "t_min": 3.9,
+            "t_max": 12.1,
+            "t_moy": 7.6,
+            "precip": 0.2,
+            "et0": 1.53
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-06",
+            "t_min": 6.3,
+            "t_max": 12.2,
+            "t_moy": 8.8,
+            "precip": 0.41,
+            "et0": 1.14
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-07",
+            "t_min": 4.4,
+            "t_max": 9.3,
+            "t_moy": 7.6,
+            "precip": 0.72,
+            "et0": 0.87
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-08",
+            "t_min": 1.9,
+            "t_max": 8.2,
+            "t_moy": 5.1,
+            "precip": 0.41,
+            "et0": 0.89
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-09",
+            "t_min": 3.5,
+            "t_max": 8.2,
+            "t_moy": 5.6,
+            "precip": 0.2,
+            "et0": 1.2
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-10",
+            "t_min": 2.0,
+            "t_max": 8.4,
+            "t_moy": 4.9,
+            "precip": 0.21,
+            "et0": 1.23
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-11",
+            "t_min": 1.7,
+            "t_max": 9.1,
+            "t_moy": 4.5,
+            "precip": 0.0,
+            "et0": 1.96
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-12",
+            "t_min": 3.0,
+            "t_max": 11.6,
+            "t_moy": 6.3,
+            "precip": 0.0,
+            "et0": 2.3
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-13",
+            "t_min": 4.5,
+            "t_max": 14.0,
+            "t_moy": 8.0,
+            "precip": 0.0,
+            "et0": 2.8
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-14",
+            "t_min": 3.6,
+            "t_max": 9.5,
+            "t_moy": 7.0,
+            "precip": 0.72,
+            "et0": 1.34
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-15",
+            "t_min": 2.2,
+            "t_max": 9.4,
+            "t_moy": 5.9,
+            "precip": 0.0,
+            "et0": 1.79
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-16",
+            "t_min": 2.1,
+            "t_max": 9.4,
+            "t_moy": 5.2,
+            "precip": 0.0,
+            "et0": 1.54
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-17",
+            "t_min": 1.8,
+            "t_max": 10.1,
+            "t_moy": 5.0,
+            "precip": 0.0,
+            "et0": 1.93
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-18",
+            "t_min": 1.3,
+            "t_max": 7.3,
+            "t_moy": 4.0,
+            "precip": 0.0,
+            "et0": 1.21
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-19",
+            "t_min": 1.4,
+            "t_max": 10.0,
+            "t_moy": 4.8,
+            "precip": 0.0,
+            "et0": 1.91
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-20",
+            "t_min": 3.1,
+            "t_max": 12.0,
+            "t_moy": 6.3,
+            "precip": 0.0,
+            "et0": 2.14
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-21",
+            "t_min": 3.4,
+            "t_max": 11.2,
+            "t_moy": 6.2,
+            "precip": 0.0,
+            "et0": 2.13
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-22",
+            "t_min": 3.0,
+            "t_max": 11.1,
+            "t_moy": 6.4,
+            "precip": 0.0,
+            "et0": 1.82
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-23",
+            "t_min": 5.1,
+            "t_max": 11.9,
+            "t_moy": 8.3,
+            "precip": 0.1,
+            "et0": 1.66
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-24",
+            "t_min": 5.7,
+            "t_max": 12.2,
+            "t_moy": 8.1,
+            "precip": 0.0,
+            "et0": 1.8
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-25",
+            "t_min": 5.3,
+            "t_max": 14.8,
+            "t_moy": 8.8,
+            "precip": 0.0,
+            "et0": 2.76
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-26",
+            "t_min": 5.5,
+            "t_max": 15.3,
+            "t_moy": 9.3,
+            "precip": 0.0,
+            "et0": 2.66
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-27",
+            "t_min": 5.4,
+            "t_max": 14.7,
+            "t_moy": 9.2,
+            "precip": 0.0,
+            "et0": 2.71
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-28",
+            "t_min": 5.5,
+            "t_max": 14.8,
+            "t_moy": 9.1,
+            "precip": 0.0,
+            "et0": 2.71
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-29",
+            "t_min": 5.0,
+            "t_max": 14.2,
+            "t_moy": 8.6,
+            "precip": 0.0,
+            "et0": 2.31
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-30",
+            "t_min": 5.0,
+            "t_max": 13.0,
+            "t_moy": 8.3,
+            "precip": 0.1,
+            "et0": 2.32
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-01-31",
+            "t_min": 4.5,
+            "t_max": 13.4,
+            "t_moy": 8.2,
+            "precip": 0.0,
+            "et0": 2.46
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-01",
+            "t_min": 4.7,
+            "t_max": 12.7,
+            "t_moy": 7.5,
+            "precip": 0.0,
+            "et0": 2.22
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-02",
+            "t_min": 5.0,
+            "t_max": 12.2,
+            "t_moy": 8.1,
+            "precip": 0.1,
+            "et0": 1.92
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-03",
+            "t_min": 6.3,
+            "t_max": 13.0,
+            "t_moy": 9.4,
+            "precip": 4.27,
+            "et0": 2.65
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-04",
+            "t_min": 7.3,
+            "t_max": 14.0,
+            "t_moy": 10.3,
+            "precip": 2.81,
+            "et0": 2.5
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-05",
+            "t_min": 8.1,
+            "t_max": 15.0,
+            "t_moy": 11.4,
+            "precip": 6.04,
+            "et0": 2.21
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-06",
+            "t_min": 6.8,
+            "t_max": 13.7,
+            "t_moy": 10.0,
+            "precip": 0.0,
+            "et0": 2.69
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-07",
+            "t_min": 2.1,
+            "t_max": 10.2,
+            "t_moy": 7.3,
+            "precip": 8.55,
+            "et0": 2.67
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-08",
+            "t_min": 2.1,
+            "t_max": 10.1,
+            "t_moy": 5.9,
+            "precip": 0.42,
+            "et0": 2.73
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-09",
+            "t_min": 3.1,
+            "t_max": 10.5,
+            "t_moy": 6.3,
+            "precip": 6.89,
+            "et0": 2.03
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-10",
+            "t_min": 1.2,
+            "t_max": 6.2,
+            "t_moy": 4.0,
+            "precip": 6.9,
+            "et0": 1.25
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-11",
+            "t_min": 0.1,
+            "t_max": 8.5,
+            "t_moy": 4.5,
+            "precip": 0.1,
+            "et0": 2.02
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-12",
+            "t_min": 6.1,
+            "t_max": 11.6,
+            "t_moy": 9.0,
+            "precip": 2.2,
+            "et0": 1.84
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-13",
+            "t_min": 8.4,
+            "t_max": 13.4,
+            "t_moy": 10.7,
+            "precip": 7.85,
+            "et0": 1.39
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-14",
+            "t_min": 3.9,
+            "t_max": 12.5,
+            "t_moy": 9.4,
+            "precip": 8.49,
+            "et0": 3.18
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-15",
+            "t_min": 2.8,
+            "t_max": 10.7,
+            "t_moy": 6.3,
+            "precip": 0.0,
+            "et0": 2.81
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-16",
+            "t_min": 1.6,
+            "t_max": 8.9,
+            "t_moy": 5.4,
+            "precip": 0.0,
+            "et0": 1.5
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-17",
+            "t_min": 4.5,
+            "t_max": 13.5,
+            "t_moy": 8.0,
+            "precip": 19.84,
+            "et0": 2.21
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-18",
+            "t_min": 3.9,
+            "t_max": 10.4,
+            "t_moy": 7.3,
+            "precip": 7.25,
+            "et0": 2.19
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-19",
+            "t_min": 3.2,
+            "t_max": 11.0,
+            "t_moy": 6.6,
+            "precip": 0.0,
+            "et0": 3.18
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-20",
+            "t_min": 3.3,
+            "t_max": 13.0,
+            "t_moy": 7.6,
+            "precip": 0.32,
+            "et0": 2.79
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-21",
+            "t_min": 6.1,
+            "t_max": 14.3,
+            "t_moy": 9.9,
+            "precip": 1.26,
+            "et0": 2.79
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-22",
+            "t_min": 6.1,
+            "t_max": 16.7,
+            "t_moy": 11.3,
+            "precip": 8.95,
+            "et0": 4.53
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-23",
+            "t_min": 5.5,
+            "t_max": 15.6,
+            "t_moy": 9.4,
+            "precip": 3.69,
+            "et0": 3.5
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-24",
+            "t_min": 5.4,
+            "t_max": 11.3,
+            "t_moy": 7.9,
+            "precip": 8.96,
+            "et0": 1.72
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-25",
+            "t_min": 5.3,
+            "t_max": 13.2,
+            "t_moy": 9.3,
+            "precip": 21.1,
+            "et0": 1.43
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-26",
+            "t_min": 7.3,
+            "t_max": 14.5,
+            "t_moy": 10.4,
+            "precip": 7.18,
+            "et0": 3.77
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-27",
+            "t_min": 5.8,
+            "t_max": 13.0,
+            "t_moy": 8.9,
+            "precip": 17.01,
+            "et0": 2.91
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-02-28",
+            "t_min": 4.7,
+            "t_max": 10.5,
+            "t_moy": 6.9,
+            "precip": 4.44,
+            "et0": 2.75
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-01",
+            "t_min": 4.7,
+            "t_max": 10.4,
+            "t_moy": 8.4,
+            "precip": 35.64,
+            "et0": 1.0
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-02",
+            "t_min": 1.9,
+            "t_max": 9.9,
+            "t_moy": 7.0,
+            "precip": 6.98,
+            "et0": 2.18
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-03",
+            "t_min": 1.7,
+            "t_max": 8.3,
+            "t_moy": 5.0,
+            "precip": 1.91,
+            "et0": 2.88
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-04",
+            "t_min": 0.3,
+            "t_max": 8.7,
+            "t_moy": 4.5,
+            "precip": 0.0,
+            "et0": 3.15
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-05",
+            "t_min": -0.7,
+            "t_max": 7.7,
+            "t_moy": 2.9,
+            "precip": 0.21,
+            "et0": 3.1
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-06",
+            "t_min": -0.6,
+            "t_max": 6.2,
+            "t_moy": 2.9,
+            "precip": 1.47,
+            "et0": 1.7
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-07",
+            "t_min": 1.0,
+            "t_max": 7.4,
+            "t_moy": 4.2,
+            "precip": 2.19,
+            "et0": 2.76
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-08",
+            "t_min": -0.7,
+            "t_max": 6.2,
+            "t_moy": 2.0,
+            "precip": 0.73,
+            "et0": 2.08
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-09",
+            "t_min": -0.8,
+            "t_max": 6.0,
+            "t_moy": 2.4,
+            "precip": 1.04,
+            "et0": 2.93
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-10",
+            "t_min": -0.7,
+            "t_max": 6.6,
+            "t_moy": 3.0,
+            "precip": 3.51,
+            "et0": 2.71
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-11",
+            "t_min": -1.0,
+            "t_max": 4.8,
+            "t_moy": 1.7,
+            "precip": 1.03,
+            "et0": 1.9
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-12",
+            "t_min": -0.5,
+            "t_max": 7.9,
+            "t_moy": 3.1,
+            "precip": 0.1,
+            "et0": 2.01
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-13",
+            "t_min": 0.8,
+            "t_max": 11.5,
+            "t_moy": 4.9,
+            "precip": 1.22,
+            "et0": 3.9
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-14",
+            "t_min": 0.3,
+            "t_max": 10.5,
+            "t_moy": 5.5,
+            "precip": 3.97,
+            "et0": 3.19
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-15",
+            "t_min": 5.4,
+            "t_max": 10.3,
+            "t_moy": 8.3,
+            "precip": 5.67,
+            "et0": 1.32
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-16",
+            "t_min": 7.4,
+            "t_max": 16.0,
+            "t_moy": 11.2,
+            "precip": 2.32,
+            "et0": 3.17
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-17",
+            "t_min": 4.9,
+            "t_max": 12.7,
+            "t_moy": 8.4,
+            "precip": 3.82,
+            "et0": 3.11
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-18",
+            "t_min": 4.8,
+            "t_max": 10.6,
+            "t_moy": 7.7,
+            "precip": 11.63,
+            "et0": 2.39
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-19",
+            "t_min": 6.1,
+            "t_max": 12.6,
+            "t_moy": 10.0,
+            "precip": 8.69,
+            "et0": 1.04
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-20",
+            "t_min": 6.8,
+            "t_max": 17.0,
+            "t_moy": 11.5,
+            "precip": 0.0,
+            "et0": 4.85
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-21",
+            "t_min": 8.3,
+            "t_max": 20.5,
+            "t_moy": 13.6,
+            "precip": 0.0,
+            "et0": 4.82
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-22",
+            "t_min": 7.3,
+            "t_max": 19.5,
+            "t_moy": 12.6,
+            "precip": 0.79,
+            "et0": 3.63
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-23",
+            "t_min": 5.6,
+            "t_max": 10.6,
+            "t_moy": 8.3,
+            "precip": 9.07,
+            "et0": 1.56
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-24",
+            "t_min": 3.4,
+            "t_max": 7.6,
+            "t_moy": 6.1,
+            "precip": 33.52,
+            "et0": 0.5
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-25",
+            "t_min": 3.4,
+            "t_max": 9.5,
+            "t_moy": 6.8,
+            "precip": 1.18,
+            "et0": 1.94
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-26",
+            "t_min": 2.3,
+            "t_max": 11.3,
+            "t_moy": 6.5,
+            "precip": 0.29,
+            "et0": 3.23
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-27",
+            "t_min": 2.9,
+            "t_max": 12.7,
+            "t_moy": 7.8,
+            "precip": 0.1,
+            "et0": 4.14
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-28",
+            "t_min": 5.5,
+            "t_max": 11.2,
+            "t_moy": 8.2,
+            "precip": 0.19,
+            "et0": 2.25
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-29",
+            "t_min": 3.1,
+            "t_max": 10.9,
+            "t_moy": 7.9,
+            "precip": 4.06,
+            "et0": 1.67
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-30",
+            "t_min": 1.1,
+            "t_max": 11.6,
+            "t_moy": 6.8,
+            "precip": 0.48,
+            "et0": 4.39
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-03-31",
+            "t_min": 5.9,
+            "t_max": 11.6,
+            "t_moy": 9.3,
+            "precip": 1.15,
+            "et0": 1.66
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-01",
+            "t_min": 6.1,
+            "t_max": 10.9,
+            "t_moy": 9.1,
+            "precip": 13.8,
+            "et0": 2.36
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-02",
+            "t_min": 8.4,
+            "t_max": 16.9,
+            "t_moy": 11.8,
+            "precip": 1.72,
+            "et0": 4.56
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-03",
+            "t_min": 8.7,
+            "t_max": 17.3,
+            "t_moy": 12.6,
+            "precip": 4.19,
+            "et0": 4.52
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-04",
+            "t_min": 9.6,
+            "t_max": 14.0,
+            "t_moy": 11.6,
+            "precip": 5.98,
+            "et0": 1.58
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-05",
+            "t_min": 10.4,
+            "t_max": 19.7,
+            "t_moy": 14.2,
+            "precip": 0.38,
+            "et0": 3.58
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-06",
+            "t_min": 11.1,
+            "t_max": 16.7,
+            "t_moy": 13.5,
+            "precip": 4.06,
+            "et0": 1.79
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-07",
+            "t_min": 7.8,
+            "t_max": 15.0,
+            "t_moy": 12.2,
+            "precip": 3.96,
+            "et0": 2.36
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-08",
+            "t_min": 5.8,
+            "t_max": 10.6,
+            "t_moy": 8.5,
+            "precip": 0.75,
+            "et0": 2.24
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-09",
+            "t_min": 4.1,
+            "t_max": 10.5,
+            "t_moy": 7.8,
+            "precip": 0.09,
+            "et0": 2.72
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-10",
+            "t_min": 2.1,
+            "t_max": 11.6,
+            "t_moy": 6.8,
+            "precip": 0.19,
+            "et0": 4.09
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-11",
+            "t_min": 2.1,
+            "t_max": 10.4,
+            "t_moy": 6.4,
+            "precip": 2.7,
+            "et0": 3.49
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-12",
+            "t_min": 4.1,
+            "t_max": 12.4,
+            "t_moy": 8.1,
+            "precip": 0.56,
+            "et0": 4.54
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-13",
+            "t_min": 4.9,
+            "t_max": 13.2,
+            "t_moy": 9.2,
+            "precip": 0.0,
+            "et0": 4.29
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-14",
+            "t_min": 5.6,
+            "t_max": 17.0,
+            "t_moy": 11.4,
+            "precip": 0.0,
+            "et0": 5.31
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-15",
+            "t_min": 7.9,
+            "t_max": 13.3,
+            "t_moy": 9.7,
+            "precip": 14.64,
+            "et0": 1.91
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-16",
+            "t_min": 9.0,
+            "t_max": 13.5,
+            "t_moy": 11.2,
+            "precip": 1.29,
+            "et0": 2.16
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-17",
+            "t_min": 9.0,
+            "t_max": 17.2,
+            "t_moy": 13.2,
+            "precip": 0.09,
+            "et0": 4.08
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-18",
+            "t_min": 10.6,
+            "t_max": 15.1,
+            "t_moy": 12.8,
+            "precip": 2.01,
+            "et0": 2.14
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-19",
+            "t_min": 9.6,
+            "t_max": 15.6,
+            "t_moy": 13.2,
+            "precip": 5.56,
+            "et0": 1.93
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-20",
+            "t_min": 9.5,
+            "t_max": 20.9,
+            "t_moy": 15.2,
+            "precip": 0.55,
+            "et0": 4.79
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-21",
+            "t_min": 8.9,
+            "t_max": 14.6,
+            "t_moy": 11.6,
+            "precip": 5.8,
+            "et0": 2.92
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-22",
+            "t_min": 7.8,
+            "t_max": 12.4,
+            "t_moy": 10.1,
+            "precip": 3.8,
+            "et0": 2.67
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-23",
+            "t_min": 7.8,
+            "t_max": 13.5,
+            "t_moy": 10.8,
+            "precip": 2.44,
+            "et0": 3.88
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-24",
+            "t_min": 6.7,
+            "t_max": 15.5,
+            "t_moy": 11.4,
+            "precip": 0.18,
+            "et0": 4.62
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-25",
+            "t_min": 8.6,
+            "t_max": 16.9,
+            "t_moy": 12.7,
+            "precip": 0.45,
+            "et0": 4.82
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-26",
+            "t_min": 7.6,
+            "t_max": 15.4,
+            "t_moy": 11.4,
+            "precip": 1.16,
+            "et0": 5.55
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-27",
+            "t_min": 6.9,
+            "t_max": 10.5,
+            "t_moy": 9.0,
+            "precip": 12.32,
+            "et0": 1.23
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-28",
+            "t_min": 6.4,
+            "t_max": 16.4,
+            "t_moy": 11.5,
+            "precip": 0.62,
+            "et0": 5.36
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-29",
+            "t_min": 6.7,
+            "t_max": 15.4,
+            "t_moy": 11.0,
+            "precip": 1.24,
+            "et0": 5.29
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-04-30",
+            "t_min": 6.4,
+            "t_max": 18.0,
+            "t_moy": 12.4,
+            "precip": 0.0,
+            "et0": 5.41
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-01",
+            "t_min": 9.1,
+            "t_max": 20.1,
+            "t_moy": 14.1,
+            "precip": 0.0,
+            "et0": 6.29
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-02",
+            "t_min": 9.8,
+            "t_max": 19.9,
+            "t_moy": 14.5,
+            "precip": 0.0,
+            "et0": 6.17
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-03",
+            "t_min": 11.2,
+            "t_max": 17.1,
+            "t_moy": 14.1,
+            "precip": 0.18,
+            "et0": 3.46
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-04",
+            "t_min": 8.6,
+            "t_max": 17.1,
+            "t_moy": 12.7,
+            "precip": 3.86,
+            "et0": 2.66
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-05",
+            "t_min": 7.2,
+            "t_max": 19.6,
+            "t_moy": 13.3,
+            "precip": 3.76,
+            "et0": 5.94
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-06",
+            "t_min": 9.3,
+            "t_max": 15.1,
+            "t_moy": 11.8,
+            "precip": 8.96,
+            "et0": 3.86
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-07",
+            "t_min": 9.3,
+            "t_max": 12.5,
+            "t_moy": 11.0,
+            "precip": 10.32,
+            "et0": 1.33
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-08",
+            "t_min": 8.5,
+            "t_max": 19.0,
+            "t_moy": 13.9,
+            "precip": 0.0,
+            "et0": 6.58
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-09",
+            "t_min": 9.8,
+            "t_max": 21.2,
+            "t_moy": 16.0,
+            "precip": 0.0,
+            "et0": 6.97
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-10",
+            "t_min": 11.7,
+            "t_max": 22.5,
+            "t_moy": 17.4,
+            "precip": 0.0,
+            "et0": 7.2
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-11",
+            "t_min": 12.5,
+            "t_max": 18.4,
+            "t_moy": 15.4,
+            "precip": 0.77,
+            "et0": 3.3
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-12",
+            "t_min": 12.2,
+            "t_max": 19.7,
+            "t_moy": 16.0,
+            "precip": 0.42,
+            "et0": 4.41
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-13",
+            "t_min": 10.8,
+            "t_max": 17.0,
+            "t_moy": 15.0,
+            "precip": 2.71,
+            "et0": 1.53
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-14",
+            "t_min": 9.3,
+            "t_max": 17.9,
+            "t_moy": 13.6,
+            "precip": 0.17,
+            "et0": 4.84
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-15",
+            "t_min": 9.9,
+            "t_max": 21.1,
+            "t_moy": 15.2,
+            "precip": 0.42,
+            "et0": 5.26
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-16",
+            "t_min": 10.7,
+            "t_max": 16.4,
+            "t_moy": 13.7,
+            "precip": 1.0,
+            "et0": 3.56
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-17",
+            "t_min": 10.1,
+            "t_max": 14.3,
+            "t_moy": 12.2,
+            "precip": 2.67,
+            "et0": 3.29
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-18",
+            "t_min": 8.5,
+            "t_max": 16.7,
+            "t_moy": 12.5,
+            "precip": 0.08,
+            "et0": 6.04
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-19",
+            "t_min": 7.2,
+            "t_max": 20.6,
+            "t_moy": 14.5,
+            "precip": 0.0,
+            "et0": 7.13
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-20",
+            "t_min": 11.1,
+            "t_max": 23.7,
+            "t_moy": 17.8,
+            "precip": 0.0,
+            "et0": 7.71
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-21",
+            "t_min": 10.9,
+            "t_max": 25.9,
+            "t_moy": 18.7,
+            "precip": 0.0,
+            "et0": 8.21
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-22",
+            "t_min": 13.9,
+            "t_max": 26.8,
+            "t_moy": 20.8,
+            "precip": 0.0,
+            "et0": 8.52
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-23",
+            "t_min": 16.0,
+            "t_max": 24.5,
+            "t_moy": 20.3,
+            "precip": 11.22,
+            "et0": 5.93
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-24",
+            "t_min": 15.7,
+            "t_max": 23.0,
+            "t_moy": 19.2,
+            "precip": 2.51,
+            "et0": 3.45
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-25",
+            "t_min": 17.7,
+            "t_max": 25.1,
+            "t_moy": 21.3,
+            "precip": 0.32,
+            "et0": 6.23
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-26",
+            "t_min": 17.5,
+            "t_max": 27.1,
+            "t_moy": 22.6,
+            "precip": 1.12,
+            "et0": 7.78
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-27",
+            "t_min": 17.3,
+            "t_max": 28.3,
+            "t_moy": 22.7,
+            "precip": 1.2,
+            "et0": 8.32
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-28",
+            "t_min": 15.2,
+            "t_max": 25.6,
+            "t_moy": 20.2,
+            "precip": 0.0,
+            "et0": 8.36
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-29",
+            "t_min": 15.3,
+            "t_max": 25.7,
+            "t_moy": 21.0,
+            "precip": 3.49,
+            "et0": 6.85
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-30",
+            "t_min": 18.1,
+            "t_max": 26.3,
+            "t_moy": 21.9,
+            "precip": 8.13,
+            "et0": 6.27
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-05-31",
+            "t_min": 8.8,
+            "t_max": 18.0,
+            "t_moy": 13.1,
+            "precip": 3.69,
+            "et0": 1.91
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-01",
+            "t_min": 9.2,
+            "t_max": 16.0,
+            "t_moy": 12.4,
+            "precip": 3.68,
+            "et0": 4.73
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-02",
+            "t_min": 9.1,
+            "t_max": 22.8,
+            "t_moy": 16.5,
+            "precip": 2.96,
+            "et0": 6.45
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-03",
+            "t_min": 11.7,
+            "t_max": 16.5,
+            "t_moy": 13.8,
+            "precip": 3.96,
+            "et0": 3.66
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-04",
+            "t_min": 11.1,
+            "t_max": 13.6,
+            "t_moy": 12.7,
+            "precip": 7.19,
+            "et0": 1.36
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-05",
+            "t_min": 11.2,
+            "t_max": 19.7,
+            "t_moy": 15.4,
+            "precip": 0.08,
+            "et0": 3.63
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-06",
+            "t_min": 13.0,
+            "t_max": 18.0,
+            "t_moy": 16.1,
+            "precip": 1.84,
+            "et0": 1.39
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-07",
+            "t_min": 15.6,
+            "t_max": 23.9,
+            "t_moy": 19.6,
+            "precip": 0.08,
+            "et0": 6.07
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-08",
+            "t_min": 15.3,
+            "t_max": 26.4,
+            "t_moy": 21.5,
+            "precip": 0.0,
+            "et0": 8.11
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-09",
+            "t_min": 16.2,
+            "t_max": 24.1,
+            "t_moy": 20.0,
+            "precip": 0.15,
+            "et0": 6.65
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-10",
+            "t_min": 14.8,
+            "t_max": 23.7,
+            "t_moy": 19.6,
+            "precip": 0.0,
+            "et0": 7.73
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-11",
+            "t_min": 15.1,
+            "t_max": 28.5,
+            "t_moy": 22.0,
+            "precip": 1.2,
+            "et0": 8.42
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-12",
+            "t_min": 12.6,
+            "t_max": 21.2,
+            "t_moy": 17.2,
+            "precip": 0.6,
+            "et0": 3.71
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-13",
+            "t_min": 11.0,
+            "t_max": 19.6,
+            "t_moy": 15.6,
+            "precip": 0.0,
+            "et0": 5.72
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-14",
+            "t_min": 11.5,
+            "t_max": 23.9,
+            "t_moy": 18.3,
+            "precip": 0.0,
+            "et0": 8.17
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-15",
+            "t_min": 13.9,
+            "t_max": 28.0,
+            "t_moy": 20.7,
+            "precip": 0.0,
+            "et0": 10.03
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-16",
+            "t_min": 17.0,
+            "t_max": 28.3,
+            "t_moy": 22.2,
+            "precip": 0.0,
+            "et0": 10.69
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-17",
+            "t_min": 16.7,
+            "t_max": 29.5,
+            "t_moy": 23.3,
+            "precip": 0.0,
+            "et0": 9.69
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-18",
+            "t_min": 18.9,
+            "t_max": 31.2,
+            "t_moy": 25.4,
+            "precip": 0.0,
+            "et0": 9.65
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-19",
+            "t_min": 20.1,
+            "t_max": 33.6,
+            "t_moy": 26.3,
+            "precip": 0.0,
+            "et0": 11.69
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-20",
+            "t_min": 18.5,
+            "t_max": 32.2,
+            "t_moy": 25.2,
+            "precip": 0.72,
+            "et0": 11.62
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-21",
+            "t_min": 18.2,
+            "t_max": 31.3,
+            "t_moy": 24.0,
+            "precip": 0.21,
+            "et0": 10.81
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-22",
+            "t_min": 19.3,
+            "t_max": 28.0,
+            "t_moy": 22.7,
+            "precip": 12.54,
+            "et0": 6.63
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-23",
+            "t_min": 19.2,
+            "t_max": 26.6,
+            "t_moy": 22.3,
+            "precip": 1.99,
+            "et0": 5.66
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-24",
+            "t_min": 18.4,
+            "t_max": 28.4,
+            "t_moy": 23.5,
+            "precip": 2.89,
+            "et0": 7.69
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-25",
+            "t_min": 19.3,
+            "t_max": 26.8,
+            "t_moy": 22.7,
+            "precip": 15.17,
+            "et0": 5.18
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-26",
+            "t_min": 17.3,
+            "t_max": 23.2,
+            "t_moy": 20.5,
+            "precip": 18.25,
+            "et0": 4.17
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-27",
+            "t_min": 14.9,
+            "t_max": 24.4,
+            "t_moy": 19.3,
+            "precip": 6.4,
+            "et0": 6.77
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-28",
+            "t_min": 14.3,
+            "t_max": 23.9,
+            "t_moy": 19.5,
+            "precip": 0.0,
+            "et0": 7.35
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-29",
+            "t_min": 16.6,
+            "t_max": 28.3,
+            "t_moy": 22.8,
+            "precip": 0.0,
+            "et0": 8.73
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-06-30",
+            "t_min": 18.2,
+            "t_max": 24.9,
+            "t_moy": 21.4,
+            "precip": 0.07,
+            "et0": 6.73
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-01",
+            "t_min": 16.2,
+            "t_max": 23.9,
+            "t_moy": 20.2,
+            "precip": 0.0,
+            "et0": 7.03
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-02",
+            "t_min": 16.6,
+            "t_max": 26.8,
+            "t_moy": 22.2,
+            "precip": 0.14,
+            "et0": 7.54
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-03",
+            "t_min": 17.6,
+            "t_max": 25.8,
+            "t_moy": 22.0,
+            "precip": 0.0,
+            "et0": 6.46
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-04",
+            "t_min": 15.7,
+            "t_max": 24.9,
+            "t_moy": 20.1,
+            "precip": 0.0,
+            "et0": 8.0
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-05",
+            "t_min": 14.8,
+            "t_max": 24.5,
+            "t_moy": 19.9,
+            "precip": 0.14,
+            "et0": 8.33
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-06",
+            "t_min": 14.6,
+            "t_max": 25.0,
+            "t_moy": 20.0,
+            "precip": 0.0,
+            "et0": 8.72
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-07",
+            "t_min": 16.2,
+            "t_max": 25.1,
+            "t_moy": 20.9,
+            "precip": 0.0,
+            "et0": 7.68
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-08",
+            "t_min": 17.0,
+            "t_max": 22.5,
+            "t_moy": 20.0,
+            "precip": 0.48,
+            "et0": 3.84
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-09",
+            "t_min": 14.1,
+            "t_max": 22.6,
+            "t_moy": 17.6,
+            "precip": 0.21,
+            "et0": 6.06
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-10",
+            "t_min": 12.3,
+            "t_max": 24.5,
+            "t_moy": 18.9,
+            "precip": 0.0,
+            "et0": 8.33
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-11",
+            "t_min": 14.7,
+            "t_max": 28.9,
+            "t_moy": 21.9,
+            "precip": 0.0,
+            "et0": 9.34
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-12",
+            "t_min": 17.5,
+            "t_max": 30.8,
+            "t_moy": 24.1,
+            "precip": 0.0,
+            "et0": 9.92
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-13",
+            "t_min": 18.3,
+            "t_max": 32.2,
+            "t_moy": 25.1,
+            "precip": 0.0,
+            "et0": 10.15
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-14",
+            "t_min": 18.1,
+            "t_max": 31.5,
+            "t_moy": 23.0,
+            "precip": 2.91,
+            "et0": 7.68
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-15",
+            "t_min": 16.7,
+            "t_max": 18.0,
+            "t_moy": 17.8,
+            "precip": 33.4,
+            "et0": 0.69
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-16",
+            "t_min": 16.8,
+            "t_max": 18.3,
+            "t_moy": 17.8,
+            "precip": 7.87,
+            "et0": 1.14
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-17",
+            "t_min": 16.4,
+            "t_max": 25.4,
+            "t_moy": 20.7,
+            "precip": 1.08,
+            "et0": 6.93
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-18",
+            "t_min": 15.1,
+            "t_max": 23.4,
+            "t_moy": 19.7,
+            "precip": 0.0,
+            "et0": 6.28
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-19",
+            "t_min": 14.6,
+            "t_max": 24.8,
+            "t_moy": 20.2,
+            "precip": 0.0,
+            "et0": 7.57
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-20",
+            "t_min": 14.4,
+            "t_max": 24.7,
+            "t_moy": 20.1,
+            "precip": 0.0,
+            "et0": 7.62
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-21",
+            "t_min": 16.6,
+            "t_max": 27.5,
+            "t_moy": 22.6,
+            "precip": 0.0,
+            "et0": 8.01
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-22",
+            "t_min": 19.0,
+            "t_max": 31.9,
+            "t_moy": 25.3,
+            "precip": 0.0,
+            "et0": 9.16
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-23",
+            "t_min": 21.3,
+            "t_max": 31.2,
+            "t_moy": 25.9,
+            "precip": 8.71,
+            "et0": 7.62
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-24",
+            "t_min": 21.8,
+            "t_max": 27.6,
+            "t_moy": 24.6,
+            "precip": 7.27,
+            "et0": 4.66
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-25",
+            "t_min": 21.7,
+            "t_max": 30.5,
+            "t_moy": 25.7,
+            "precip": 1.64,
+            "et0": 7.06
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-26",
+            "t_min": 19.7,
+            "t_max": 27.5,
+            "t_moy": 24.3,
+            "precip": 0.15,
+            "et0": 5.92
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-27",
+            "t_min": 17.2,
+            "t_max": 23.4,
+            "t_moy": 20.4,
+            "precip": 0.6,
+            "et0": 4.5
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-28",
+            "t_min": 14.4,
+            "t_max": 23.4,
+            "t_moy": 19.4,
+            "precip": 0.0,
+            "et0": 7.13
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-29",
+            "t_min": 16.6,
+            "t_max": 28.1,
+            "t_moy": 22.8,
+            "precip": 0.0,
+            "et0": 7.53
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-30",
+            "t_min": 19.7,
+            "t_max": 31.1,
+            "t_moy": 25.2,
+            "precip": 5.26,
+            "et0": 8.29
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-07-31",
+            "t_min": 20.4,
+            "t_max": 26.8,
+            "t_moy": 23.4,
+            "precip": 3.45,
+            "et0": 5.72
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-01",
+            "t_min": 19.1,
+            "t_max": 28.8,
+            "t_moy": 24.4,
+            "precip": 0.0,
+            "et0": 7.84
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-02",
+            "t_min": 21.5,
+            "t_max": 33.9,
+            "t_moy": 26.8,
+            "precip": 1.47,
+            "et0": 10.05
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-03",
+            "t_min": 18.8,
+            "t_max": 25.3,
+            "t_moy": 22.0,
+            "precip": 1.32,
+            "et0": 6.67
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-04",
+            "t_min": 18.3,
+            "t_max": 26.1,
+            "t_moy": 21.8,
+            "precip": 0.31,
+            "et0": 5.64
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-05",
+            "t_min": 16.5,
+            "t_max": 24.6,
+            "t_moy": 20.6,
+            "precip": 0.08,
+            "et0": 8.08
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-06",
+            "t_min": 16.3,
+            "t_max": 26.1,
+            "t_moy": 21.2,
+            "precip": 0.0,
+            "et0": 7.9
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-07",
+            "t_min": 16.8,
+            "t_max": 26.4,
+            "t_moy": 21.2,
+            "precip": 0.0,
+            "et0": 8.5
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-08",
+            "t_min": 15.0,
+            "t_max": 25.6,
+            "t_moy": 20.4,
+            "precip": 0.0,
+            "et0": 8.54
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-09",
+            "t_min": 14.8,
+            "t_max": 26.7,
+            "t_moy": 21.1,
+            "precip": 0.0,
+            "et0": 8.53
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-10",
+            "t_min": 17.9,
+            "t_max": 27.0,
+            "t_moy": 21.9,
+            "precip": 0.0,
+            "et0": 8.23
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-11",
+            "t_min": 16.0,
+            "t_max": 27.8,
+            "t_moy": 21.9,
+            "precip": 0.0,
+            "et0": 9.21
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-12",
+            "t_min": 13.7,
+            "t_max": 28.6,
+            "t_moy": 21.4,
+            "precip": 0.0,
+            "et0": 9.13
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-13",
+            "t_min": 17.2,
+            "t_max": 30.6,
+            "t_moy": 23.7,
+            "precip": 0.0,
+            "et0": 10.66
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-14",
+            "t_min": 20.1,
+            "t_max": 29.8,
+            "t_moy": 24.5,
+            "precip": 0.25,
+            "et0": 8.52
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-15",
+            "t_min": 19.8,
+            "t_max": 31.4,
+            "t_moy": 25.1,
+            "precip": 0.0,
+            "et0": 10.51
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-16",
+            "t_min": 20.5,
+            "t_max": 31.8,
+            "t_moy": 25.1,
+            "precip": 0.0,
+            "et0": 10.08
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-17",
+            "t_min": 19.6,
+            "t_max": 32.7,
+            "t_moy": 25.7,
+            "precip": 0.75,
+            "et0": 9.02
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-18",
+            "t_min": 19.3,
+            "t_max": 28.3,
+            "t_moy": 23.2,
+            "precip": 3.19,
+            "et0": 6.13
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-19",
+            "t_min": 15.9,
+            "t_max": 26.6,
+            "t_moy": 21.6,
+            "precip": 0.0,
+            "et0": 5.82
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-20",
+            "t_min": 18.9,
+            "t_max": 32.2,
+            "t_moy": 25.2,
+            "precip": 0.0,
+            "et0": 9.1
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-21",
+            "t_min": 18.3,
+            "t_max": 30.4,
+            "t_moy": 23.1,
+            "precip": 15.44,
+            "et0": 7.65
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-22",
+            "t_min": 13.6,
+            "t_max": 18.0,
+            "t_moy": 15.8,
+            "precip": 4.37,
+            "et0": 1.95
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-23",
+            "t_min": 13.5,
+            "t_max": 19.1,
+            "t_moy": 16.8,
+            "precip": 1.03,
+            "et0": 2.97
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-24",
+            "t_min": 16.5,
+            "t_max": 21.1,
+            "t_moy": 19.3,
+            "precip": 1.91,
+            "et0": 2.15
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-25",
+            "t_min": 17.5,
+            "t_max": 24.5,
+            "t_moy": 20.3,
+            "precip": 0.26,
+            "et0": 5.14
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-26",
+            "t_min": 16.4,
+            "t_max": 27.4,
+            "t_moy": 22.1,
+            "precip": 0.0,
+            "et0": 6.96
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-27",
+            "t_min": 18.4,
+            "t_max": 31.2,
+            "t_moy": 24.8,
+            "precip": 0.0,
+            "et0": 7.66
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-28",
+            "t_min": 19.1,
+            "t_max": 26.3,
+            "t_moy": 22.6,
+            "precip": 0.53,
+            "et0": 5.9
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-29",
+            "t_min": 15.2,
+            "t_max": 24.5,
+            "t_moy": 20.2,
+            "precip": 0.09,
+            "et0": 6.5
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-30",
+            "t_min": 12.9,
+            "t_max": 24.8,
+            "t_moy": 18.9,
+            "precip": 0.0,
+            "et0": 7.34
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-08-31",
+            "t_min": 14.1,
+            "t_max": 26.7,
+            "t_moy": 20.5,
+            "precip": 0.0,
+            "et0": 7.69
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-01",
+            "t_min": 15.8,
+            "t_max": 31.1,
+            "t_moy": 23.3,
+            "precip": 0.0,
+            "et0": 8.41
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-02",
+            "t_min": 19.1,
+            "t_max": 34.4,
+            "t_moy": 26.4,
+            "precip": 0.0,
+            "et0": 9.23
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-03",
+            "t_min": 20.4,
+            "t_max": 35.8,
+            "t_moy": 27.2,
+            "precip": 0.0,
+            "et0": 12.39
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-04",
+            "t_min": 21.7,
+            "t_max": 31.8,
+            "t_moy": 25.4,
+            "precip": 0.0,
+            "et0": 9.87
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-05",
+            "t_min": 21.1,
+            "t_max": 32.3,
+            "t_moy": 25.6,
+            "precip": 0.0,
+            "et0": 9.77
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-06",
+            "t_min": 19.8,
+            "t_max": 32.3,
+            "t_moy": 25.5,
+            "precip": 12.67,
+            "et0": 7.73
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-07",
+            "t_min": 15.6,
+            "t_max": 23.5,
+            "t_moy": 19.7,
+            "precip": 13.52,
+            "et0": 5.27
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-08",
+            "t_min": 14.4,
+            "t_max": 25.1,
+            "t_moy": 19.7,
+            "precip": 0.0,
+            "et0": 7.45
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-09",
+            "t_min": 15.7,
+            "t_max": 29.1,
+            "t_moy": 22.6,
+            "precip": 0.0,
+            "et0": 8.07
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-10",
+            "t_min": 17.0,
+            "t_max": 28.9,
+            "t_moy": 22.8,
+            "precip": 0.0,
+            "et0": 9.33
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-11",
+            "t_min": 15.6,
+            "t_max": 26.8,
+            "t_moy": 20.9,
+            "precip": 0.0,
+            "et0": 8.17
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-12",
+            "t_min": 13.9,
+            "t_max": 26.6,
+            "t_moy": 20.4,
+            "precip": 0.0,
+            "et0": 8.41
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-13",
+            "t_min": 15.0,
+            "t_max": 27.3,
+            "t_moy": 20.7,
+            "precip": 0.0,
+            "et0": 7.67
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-14",
+            "t_min": 13.7,
+            "t_max": 27.5,
+            "t_moy": 20.2,
+            "precip": 0.0,
+            "et0": 7.68
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-15",
+            "t_min": 16.6,
+            "t_max": 28.2,
+            "t_moy": 21.8,
+            "precip": 0.0,
+            "et0": 8.09
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-16",
+            "t_min": 16.7,
+            "t_max": 27.8,
+            "t_moy": 21.8,
+            "precip": 0.0,
+            "et0": 8.11
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-17",
+            "t_min": 13.9,
+            "t_max": 26.6,
+            "t_moy": 20.2,
+            "precip": 0.0,
+            "et0": 9.0
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-18",
+            "t_min": 12.9,
+            "t_max": 25.0,
+            "t_moy": 19.1,
+            "precip": 0.0,
+            "et0": 7.38
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-19",
+            "t_min": 13.7,
+            "t_max": 27.4,
+            "t_moy": 20.4,
+            "precip": 0.0,
+            "et0": 8.04
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-20",
+            "t_min": 14.9,
+            "t_max": 29.3,
+            "t_moy": 21.5,
+            "precip": 0.0,
+            "et0": 7.29
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-21",
+            "t_min": 15.8,
+            "t_max": 30.8,
+            "t_moy": 22.8,
+            "precip": 0.0,
+            "et0": 8.56
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-22",
+            "t_min": 17.2,
+            "t_max": 31.6,
+            "t_moy": 23.7,
+            "precip": 0.0,
+            "et0": 8.75
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-23",
+            "t_min": 17.3,
+            "t_max": 31.5,
+            "t_moy": 23.3,
+            "precip": 0.0,
+            "et0": 10.84
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-24",
+            "t_min": 16.9,
+            "t_max": 28.1,
+            "t_moy": 21.4,
+            "precip": 0.0,
+            "et0": 10.42
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-25",
+            "t_min": 15.2,
+            "t_max": 25.6,
+            "t_moy": 19.5,
+            "precip": 0.0,
+            "et0": 8.75
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-26",
+            "t_min": 15.0,
+            "t_max": 23.6,
+            "t_moy": 18.8,
+            "precip": 4.85,
+            "et0": 6.51
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-27",
+            "t_min": 10.9,
+            "t_max": 17.0,
+            "t_moy": 15.3,
+            "precip": 5.81,
+            "et0": 1.92
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-28",
+            "t_min": 10.4,
+            "t_max": 17.8,
+            "t_moy": 13.8,
+            "precip": 0.19,
+            "et0": 3.99
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-29",
+            "t_min": 10.6,
+            "t_max": 15.4,
+            "t_moy": 12.9,
+            "precip": 1.72,
+            "et0": 2.12
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-09-30",
+            "t_min": 9.2,
+            "t_max": 17.7,
+            "t_moy": 13.2,
+            "precip": 0.77,
+            "et0": 3.79
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-01",
+            "t_min": 11.0,
+            "t_max": 16.9,
+            "t_moy": 14.0,
+            "precip": 1.15,
+            "et0": 1.83
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-02",
+            "t_min": 14.8,
+            "t_max": 21.2,
+            "t_moy": 17.7,
+            "precip": 0.38,
+            "et0": 2.11
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-03",
+            "t_min": 13.2,
+            "t_max": 26.8,
+            "t_moy": 18.4,
+            "precip": 5.77,
+            "et0": 6.22
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-04",
+            "t_min": 9.4,
+            "t_max": 15.6,
+            "t_moy": 13.1,
+            "precip": 1.83,
+            "et0": 2.69
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-05",
+            "t_min": 8.7,
+            "t_max": 17.3,
+            "t_moy": 12.8,
+            "precip": 0.0,
+            "et0": 3.93
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-06",
+            "t_min": 10.9,
+            "t_max": 21.9,
+            "t_moy": 16.8,
+            "precip": 0.19,
+            "et0": 4.5
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-07",
+            "t_min": 12.7,
+            "t_max": 18.3,
+            "t_moy": 15.9,
+            "precip": 4.55,
+            "et0": 1.81
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-08",
+            "t_min": 12.2,
+            "t_max": 18.7,
+            "t_moy": 15.1,
+            "precip": 0.1,
+            "et0": 3.83
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-09",
+            "t_min": 12.3,
+            "t_max": 23.6,
+            "t_moy": 17.8,
+            "precip": 0.29,
+            "et0": 4.2
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-10",
+            "t_min": 16.0,
+            "t_max": 25.0,
+            "t_moy": 20.0,
+            "precip": 0.29,
+            "et0": 5.08
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-11",
+            "t_min": 13.2,
+            "t_max": 19.8,
+            "t_moy": 16.4,
+            "precip": 0.49,
+            "et0": 3.96
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-12",
+            "t_min": 12.1,
+            "t_max": 17.1,
+            "t_moy": 14.8,
+            "precip": 1.46,
+            "et0": 1.94
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-13",
+            "t_min": 10.7,
+            "t_max": 18.7,
+            "t_moy": 14.1,
+            "precip": 0.0,
+            "et0": 3.93
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-14",
+            "t_min": 11.4,
+            "t_max": 23.7,
+            "t_moy": 17.3,
+            "precip": 0.0,
+            "et0": 5.64
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-15",
+            "t_min": 14.4,
+            "t_max": 25.6,
+            "t_moy": 18.6,
+            "precip": 1.37,
+            "et0": 5.38
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-16",
+            "t_min": 13.2,
+            "t_max": 16.7,
+            "t_moy": 15.2,
+            "precip": 2.46,
+            "et0": 1.14
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-17",
+            "t_min": 12.7,
+            "t_max": 18.1,
+            "t_moy": 15.2,
+            "precip": 2.66,
+            "et0": 2.35
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-18",
+            "t_min": 10.2,
+            "t_max": 16.1,
+            "t_moy": 13.8,
+            "precip": 23.37,
+            "et0": 1.71
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-19",
+            "t_min": 9.0,
+            "t_max": 16.5,
+            "t_moy": 12.0,
+            "precip": 0.1,
+            "et0": 2.87
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-20",
+            "t_min": 7.4,
+            "t_max": 17.7,
+            "t_moy": 12.4,
+            "precip": 0.0,
+            "et0": 3.23
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-21",
+            "t_min": 11.0,
+            "t_max": 20.4,
+            "t_moy": 14.7,
+            "precip": 0.0,
+            "et0": 3.41
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-22",
+            "t_min": 10.4,
+            "t_max": 20.9,
+            "t_moy": 14.5,
+            "precip": 0.0,
+            "et0": 3.98
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-23",
+            "t_min": 11.8,
+            "t_max": 19.4,
+            "t_moy": 15.5,
+            "precip": 0.1,
+            "et0": 2.65
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-24",
+            "t_min": 14.5,
+            "t_max": 21.2,
+            "t_moy": 17.3,
+            "precip": 0.0,
+            "et0": 3.27
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-25",
+            "t_min": 15.6,
+            "t_max": 22.9,
+            "t_moy": 18.4,
+            "precip": 0.0,
+            "et0": 3.74
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-26",
+            "t_min": 14.6,
+            "t_max": 20.9,
+            "t_moy": 17.3,
+            "precip": 0.0,
+            "et0": 2.75
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-27",
+            "t_min": 11.0,
+            "t_max": 16.2,
+            "t_moy": 14.3,
+            "precip": 1.6,
+            "et0": 1.47
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-28",
+            "t_min": 8.3,
+            "t_max": 17.4,
+            "t_moy": 12.3,
+            "precip": 0.0,
+            "et0": 3.58
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-29",
+            "t_min": 8.5,
+            "t_max": 17.3,
+            "t_moy": 12.5,
+            "precip": 0.0,
+            "et0": 2.77
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-30",
+            "t_min": 9.5,
+            "t_max": 19.8,
+            "t_moy": 14.1,
+            "precip": 0.0,
+            "et0": 3.76
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-10-31",
+            "t_min": 10.8,
+            "t_max": 14.6,
+            "t_moy": 13.1,
+            "precip": 2.22,
+            "et0": 1.43
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-01",
+            "t_min": 10.1,
+            "t_max": 14.4,
+            "t_moy": 12.0,
+            "precip": 14.22,
+            "et0": 1.18
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-02",
+            "t_min": 9.9,
+            "t_max": 15.8,
+            "t_moy": 12.6,
+            "precip": 4.04,
+            "et0": 3.33
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-03",
+            "t_min": 9.2,
+            "t_max": 18.2,
+            "t_moy": 13.4,
+            "precip": 2.12,
+            "et0": 1.41
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-04",
+            "t_min": 8.1,
+            "t_max": 14.0,
+            "t_moy": 10.7,
+            "precip": 2.83,
+            "et0": 1.72
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-05",
+            "t_min": 9.2,
+            "t_max": 15.0,
+            "t_moy": 11.6,
+            "precip": 2.12,
+            "et0": 2.18
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-06",
+            "t_min": 10.2,
+            "t_max": 16.4,
+            "t_moy": 12.7,
+            "precip": 0.3,
+            "et0": 2.45
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-07",
+            "t_min": 7.8,
+            "t_max": 12.1,
+            "t_moy": 10.5,
+            "precip": 3.03,
+            "et0": 0.99
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-08",
+            "t_min": 6.7,
+            "t_max": 11.8,
+            "t_moy": 9.4,
+            "precip": 2.22,
+            "et0": 1.24
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-09",
+            "t_min": 5.6,
+            "t_max": 10.7,
+            "t_moy": 8.1,
+            "precip": 0.4,
+            "et0": 1.63
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-10",
+            "t_min": 6.7,
+            "t_max": 13.9,
+            "t_moy": 9.9,
+            "precip": 11.12,
+            "et0": 1.19
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-11",
+            "t_min": 7.6,
+            "t_max": 11.8,
+            "t_moy": 9.8,
+            "precip": 0.81,
+            "et0": 1.45
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-12",
+            "t_min": 7.4,
+            "t_max": 12.0,
+            "t_moy": 9.3,
+            "precip": 0.3,
+            "et0": 1.61
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-13",
+            "t_min": 7.5,
+            "t_max": 14.0,
+            "t_moy": 11.6,
+            "precip": 4.25,
+            "et0": 0.52
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-14",
+            "t_min": 8.8,
+            "t_max": 15.2,
+            "t_moy": 12.4,
+            "precip": 2.63,
+            "et0": 1.56
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-15",
+            "t_min": 4.7,
+            "t_max": 12.6,
+            "t_moy": 8.4,
+            "precip": 0.0,
+            "et0": 2.55
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-16",
+            "t_min": 5.8,
+            "t_max": 12.8,
+            "t_moy": 9.5,
+            "precip": 0.91,
+            "et0": 0.72
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-17",
+            "t_min": 4.9,
+            "t_max": 11.4,
+            "t_moy": 7.5,
+            "precip": 0.0,
+            "et0": 1.79
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-18",
+            "t_min": 4.1,
+            "t_max": 13.0,
+            "t_moy": 8.0,
+            "precip": 0.0,
+            "et0": 2.3
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-19",
+            "t_min": 6.9,
+            "t_max": 14.7,
+            "t_moy": 11.4,
+            "precip": 0.3,
+            "et0": 1.31
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-20",
+            "t_min": 10.6,
+            "t_max": 15.7,
+            "t_moy": 13.2,
+            "precip": 0.1,
+            "et0": 1.33
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-21",
+            "t_min": 10.6,
+            "t_max": 15.7,
+            "t_moy": 12.8,
+            "precip": 0.3,
+            "et0": 1.58
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-22",
+            "t_min": 9.5,
+            "t_max": 15.7,
+            "t_moy": 12.2,
+            "precip": 1.32,
+            "et0": 2.2
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-23",
+            "t_min": 8.3,
+            "t_max": 14.5,
+            "t_moy": 11.8,
+            "precip": 0.91,
+            "et0": 1.71
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-24",
+            "t_min": 6.8,
+            "t_max": 15.3,
+            "t_moy": 10.4,
+            "precip": 0.0,
+            "et0": 2.33
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-25",
+            "t_min": 8.3,
+            "t_max": 14.2,
+            "t_moy": 10.6,
+            "precip": 0.51,
+            "et0": 1.74
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-26",
+            "t_min": 7.7,
+            "t_max": 12.9,
+            "t_moy": 10.7,
+            "precip": 1.01,
+            "et0": 1.4
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-27",
+            "t_min": 8.7,
+            "t_max": 15.3,
+            "t_moy": 11.3,
+            "precip": 1.52,
+            "et0": 2.01
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-28",
+            "t_min": 7.9,
+            "t_max": 12.0,
+            "t_moy": 9.8,
+            "precip": 1.62,
+            "et0": 1.77
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-29",
+            "t_min": 6.9,
+            "t_max": 16.1,
+            "t_moy": 9.9,
+            "precip": 8.52,
+            "et0": 3.07
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-11-30",
+            "t_min": 3.6,
+            "t_max": 10.8,
+            "t_moy": 7.9,
+            "precip": 3.45,
+            "et0": 1.39
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-01",
+            "t_min": 2.8,
+            "t_max": 8.5,
+            "t_moy": 5.1,
+            "precip": 0.1,
+            "et0": 1.53
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-02",
+            "t_min": 3.1,
+            "t_max": 10.3,
+            "t_moy": 7.1,
+            "precip": 0.3,
+            "et0": 1.15
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-03",
+            "t_min": 6.5,
+            "t_max": 10.9,
+            "t_moy": 8.9,
+            "precip": 0.51,
+            "et0": 0.9
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-04",
+            "t_min": 5.1,
+            "t_max": 10.2,
+            "t_moy": 7.8,
+            "precip": 0.51,
+            "et0": 0.98
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-05",
+            "t_min": 4.2,
+            "t_max": 11.9,
+            "t_moy": 7.3,
+            "precip": 0.0,
+            "et0": 1.89
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-06",
+            "t_min": 5.2,
+            "t_max": 11.5,
+            "t_moy": 8.0,
+            "precip": 0.2,
+            "et0": 1.37
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-07",
+            "t_min": 6.3,
+            "t_max": 13.5,
+            "t_moy": 9.5,
+            "precip": 0.2,
+            "et0": 1.94
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-08",
+            "t_min": 8.6,
+            "t_max": 16.7,
+            "t_moy": 11.5,
+            "precip": 0.0,
+            "et0": 2.57
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-09",
+            "t_min": 8.7,
+            "t_max": 16.1,
+            "t_moy": 11.9,
+            "precip": 0.1,
+            "et0": 2.56
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-10",
+            "t_min": 8.4,
+            "t_max": 14.0,
+            "t_moy": 10.8,
+            "precip": 0.2,
+            "et0": 2.06
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-11",
+            "t_min": 7.5,
+            "t_max": 11.7,
+            "t_moy": 10.0,
+            "precip": 23.48,
+            "et0": 0.7
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-12",
+            "t_min": 5.5,
+            "t_max": 10.6,
+            "t_moy": 7.8,
+            "precip": 4.07,
+            "et0": 1.59
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-13",
+            "t_min": 5.0,
+            "t_max": 10.4,
+            "t_moy": 8.3,
+            "precip": 0.2,
+            "et0": 1.17
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-14",
+            "t_min": 8.0,
+            "t_max": 13.9,
+            "t_moy": 10.2,
+            "precip": 7.02,
+            "et0": 1.25
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-15",
+            "t_min": 4.9,
+            "t_max": 13.4,
+            "t_moy": 9.3,
+            "precip": 4.37,
+            "et0": 1.5
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-16",
+            "t_min": 3.8,
+            "t_max": 11.3,
+            "t_moy": 7.2,
+            "precip": 0.0,
+            "et0": 1.93
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-17",
+            "t_min": 6.6,
+            "t_max": 13.3,
+            "t_moy": 10.2,
+            "precip": 0.41,
+            "et0": 0.97
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-18",
+            "t_min": 5.2,
+            "t_max": 12.1,
+            "t_moy": 8.9,
+            "precip": 0.0,
+            "et0": 1.7
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-19",
+            "t_min": 4.8,
+            "t_max": 10.9,
+            "t_moy": 7.2,
+            "precip": 0.0,
+            "et0": 2.64
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-20",
+            "t_min": 5.3,
+            "t_max": 13.3,
+            "t_moy": 8.9,
+            "precip": 0.0,
+            "et0": 2.06
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-21",
+            "t_min": 9.5,
+            "t_max": 15.2,
+            "t_moy": 12.6,
+            "precip": 0.0,
+            "et0": 2.22
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-22",
+            "t_min": 11.1,
+            "t_max": 15.2,
+            "t_moy": 13.1,
+            "precip": 0.0,
+            "et0": 2.54
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-23",
+            "t_min": 7.5,
+            "t_max": 12.8,
+            "t_moy": 10.8,
+            "precip": 0.0,
+            "et0": 1.56
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-24",
+            "t_min": 7.7,
+            "t_max": 15.1,
+            "t_moy": 10.7,
+            "precip": 0.0,
+            "et0": 1.87
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-25",
+            "t_min": 8.2,
+            "t_max": 15.2,
+            "t_moy": 10.9,
+            "precip": 0.1,
+            "et0": 1.96
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-26",
+            "t_min": 8.6,
+            "t_max": 15.9,
+            "t_moy": 11.8,
+            "precip": 0.0,
+            "et0": 1.97
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-27",
+            "t_min": 10.1,
+            "t_max": 15.1,
+            "t_moy": 12.2,
+            "precip": 0.1,
+            "et0": 1.63
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-28",
+            "t_min": 8.7,
+            "t_max": 14.7,
+            "t_moy": 11.5,
+            "precip": 1.32,
+            "et0": 1.86
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-29",
+            "t_min": 6.4,
+            "t_max": 11.5,
+            "t_moy": 9.1,
+            "precip": 3.47,
+            "et0": 0.79
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-30",
+            "t_min": 3.5,
+            "t_max": 7.7,
+            "t_moy": 5.2,
+            "precip": 0.92,
+            "et0": 0.67
+        },
+        {
+            "id_commune": 13,
+            "date": "2015-12-31",
+            "t_min": 2.3,
+            "t_max": 6.8,
+            "t_moy": 4.4,
+            "precip": 1.02,
+            "et0": 1.07
+        }
+    ]
+}
