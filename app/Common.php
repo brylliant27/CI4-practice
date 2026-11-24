@@ -13,3 +13,24 @@
  *
  * @see: https://codeigniter.com/user_guide/extending/common.html
  */
+
+if (! function_exists('fr_nombre')) {
+    /**
+     * Nombre au format français : 1 234,5. Null => « — » (donnée absente).
+     */
+    function fr_nombre(float|int|string|null $valeur, int $decimales = 1): string
+    {
+        if ($valeur === null || $valeur === '') {
+            return '—';
+        }
+
+        $texte = number_format((float) $valeur, $decimales, ',', "\u{202F}");
+
+        // « 3,0 » s'affiche « 3 » ; « -0 » s'affiche « 0 ».
+        if ($decimales > 0) {
+            $texte = rtrim(rtrim($texte, '0'), ',');
+        }
+
+        return $texte === '-0' ? '0' : $texte;
+    }
+}
