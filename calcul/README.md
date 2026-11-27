@@ -56,10 +56,4 @@ php vendor/bin/phpunit                   # PHP, dont le pont PHP → Python (tes
 
 ## Déploiement (Alwaysdata)
 
-Dans le `.env` du serveur, indiquer la commande Python à utiliser :
-
-```
-calcul.python = python3
-```
-
-Sous Windows (WampServer), la valeur par défaut est `python`.
+Rien à installer : le module n'utilise que la bibliothèque standard. Dans le `.env` du serveur, `calcul.python` doit contenir le chemin absolu de Python, donné par `command -v python` en SSH. La procédure complète est dans `docs/deploiement.md`, et `php spark deploiement:verifier` vérifie que le module répond sur le serveur.

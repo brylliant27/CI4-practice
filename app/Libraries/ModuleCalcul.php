@@ -15,7 +15,7 @@ use RuntimeException;
  * Format détaillé : calcul/README.md.
  *
  * Réglages (.env) :
- *   calcul.python = python3     commande Python (python sous Windows, python3 sur Alwaysdata)
+ *   calcul.python = python      commande Python (sur Alwaysdata : chemin absolu donné par « command -v python »)
  */
 class ModuleCalcul
 {
@@ -27,7 +27,7 @@ class ModuleCalcul
 
     public function __construct(?string $python = null, ?string $script = null)
     {
-        $this->python = $python ?? (string) env('calcul.python', PHP_OS_FAMILY === 'Windows' ? 'python' : 'python3');
+        $this->python = $python ?? (string) env('calcul.python', 'python');
         $this->script = $script ?? ROOTPATH . 'calcul' . DIRECTORY_SEPARATOR . 'module_calcul.py';
     }
 
