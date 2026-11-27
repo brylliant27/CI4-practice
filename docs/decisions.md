@@ -1,34 +1,51 @@
 # Décisions techniques — équipe 04
 
-*Mise à jour : 24 novembre 2026. Chaque décision est proposée par le pôle DEV et **doit être validée par l'équipe** (cocher la case une fois validée).*
+*Mise à jour : 27 novembre 2026. Chaque décision est proposée par un pôle et **doit être validée par l'équipe** (cocher la case une fois validée). Une décision remplacée reste dans le fichier, barrée dans son titre, avec la raison du changement.*
 
-## D1 — Une seule pile technique
-
-- [ ] validée par l'équipe
-
-**Décision** : PHP 8.2+ avec **CodeIgniter 4**, base **MariaDB/MySQL**, hébergement **Alwaysdata**.
-
-**Pourquoi** : c'est la pile annoncée dans le document de conception, et la seule qui a du code qui tourne de bout en bout. CodeIgniter tient dans les 100 Mo d'Alwaysdata, qui fournit MariaDB, et WampServer en local fournit aussi MariaDB (port 3307).
-
-**Ce qui est abandonné** : le prototype Flask/Python du dépôt `SA-3.01-Climat-Cultures` (le kit du prof a servi de modèle et a été porté en PHP) et SQLite à l'exécution. SQLite ne sert plus qu'aux **tests automatiques**, dans une base en mémoire. Le schéma est créé par la migration CodeIgniter (`php spark migrate`), qui génère le SQL adapté à la base utilisée.
-
-## D2 — Journée exactement au seuil : `≤` pour le gel, `≥` pour la chaleur
+## D1 — Pile technique : application PHP, module de calcul Python du pôle DATA
 
 - [ ] validée par l'équipe
 
-**Décision** : un jour est gelé si `t_min ≤ seuil_gel_c`. Un jour est en stress thermique si `t_max ≥ seuil_stress_thermique_c`.
+**Décision** : l'application est en PHP 8.2+ avec **CodeIgniter 4**, base **MariaDB/MySQL**, hébergée sur **Alwaysdata**. Le **calcul des indicateurs** est un module **Python** du pôle DATA (`calcul/`), appelé par l'application à chaque diagnostic.
 
-**Pourquoi** : par prudence. Une journée qui atteint le seuil atteint la température qui endommage la plante. Pour un agriculteur qui engage un investissement de 20 ou 30 ans, mieux vaut signaler un risque de trop qu'en manquer un. Le kit utilise `<` : notre choix compte un peu plus de jours, et l'écart reste faible (sur Toulouse 2015, aucun jour n'est exactement à 0 °C).
+```
+ClimateApi (DEV) ─► séries du contrat v1.0 ─► calcul/module_calcul.py (DATA) ─► valeurs ─► fact_indicateur (par session)
+```
 
-**Où** : `app/Libraries/Indicateurs.php`, méthode `valeurDuJour`. Un test (`testJourneeExactementAuSeuilCompte`) échoue si on change la règle.
+**Pourquoi** : l'énoncé fait du pôle DATA le propriétaire de la logique de calcul (« DEV produit les séries, DATA produit les faits »). Le pôle DATA ajoute un indicateur dans un seul fichier, `calcul/indicateurs.py`, sans toucher au PHP. Le module ne se connecte ni à la base ni à l'API, et n'utilise que la bibliothèque standard de Python : rien à installer sur Alwaysdata. L'application garde ce qui relève du pôle DEV : client API (cache, erreurs, quota), écriture des faits par session, affichage, RGPD.
+
+**Contrat PHP ↔ Python** : `calcul/README.md`. Les codes d'indicateurs sont ceux du pôle DATA (`jours_gel`, `jours_stress`, `gdd`, `cumul_pluie`).
+
+**Ce qui est abandonné** :
+- le prototype Flask du dépôt `SA-3.01-Climat-Cultures` et SQLite à l'exécution (SQLite ne sert plus qu'aux tests automatiques, dans une base en mémoire) ;
+- le calcul en PHP de la première version du MVP (`Indicateurs.php` ne sert plus qu'à l'affichage) ;
+- la connexion directe du script `calculer.py` à la base et à l'API : il reste l'outil de test en console du pôle DATA, mais l'application ne l'utilise pas.
+
+*Version précédente (24/11)* : « une seule pile, tout en PHP ». Remplacée le 27/11, quand l'équipe a confié le calcul au pôle DATA (PR #2).
+
+## D2 — Journée exactement au seuil : règles du pôle DATA
+
+- [ ] validée par l'équipe (pôle DATA)
+
+**Décision** : un jour est gelé si `t_min < seuil_gel_c` (**strictement** sous le seuil). Un jour est en stress thermique si `t_max ≥ seuil_stress_thermique_c`. Le GDD prend la moyenne `(t_max + t_min) / 2`.
+
+**Pourquoi** : ce sont les règles écrites par le pôle DATA, propriétaire du calcul : requêtes SQL du dossier J2 pour le gel et le GDD, `calcul/indicateurs.py` pour le stress thermique.
+
+**Point ouvert pour le pôle DATA** : la règle de stress thermique est `>` dans le SQL du J2 mais `≥` dans le Python. C'est le Python qui s'applique, à confirmer.
+
+**Où** : `calcul/indicateurs.py`. Le jeu d'essais `calcul/test_module_calcul.py` échoue si on change une règle : la journée du 3 janvier 2015, exactement à 0 °C, ne doit pas compter.
+
+*Version précédente (24/11)* : `≤` pour le gel et `≥` pour la chaleur, par prudence (signaler un risque de trop plutôt qu'en manquer un). Remplacée le 27/11 : le calcul appartient au pôle DATA, et ce sont ses règles qui s'appliquent. L'écart reste faible : sur Toulouse 2015, aucun jour n'est exactement à 0 °C.
 
 ## D3 — Valeur manquante : ignorée et signalée, jamais remplacée par 0
 
 - [ ] validée par l'équipe
 
-**Décision** : une journée sans donnée pour la variable utilisée est **ignorée** et comptée dans « manquants ». Une année sans **aucune** donnée n'a pas de valeur et est exclue de la moyenne de l'horizon. Une année **sans gel** vaut 0 et compte dans la moyenne. Si une période contient des journées manquantes, la page de résultat l'indique.
+**Décision** : une journée sans donnée pour une variable de l'indicateur est **ignorée** et comptée dans « manquants ». Une année sans **aucune** donnée exploitable n'a pas de valeur et est exclue de la moyenne de l'horizon. Une année **sans gel** vaut 0 et compte dans la moyenne. Si une période contient des journées manquantes, la page de résultat l'indique.
 
-**Pourquoi** : en PHP, `null <= 0` est vrai. Remplacer un manque par 0 transformerait chaque jour sans mesure en jour de gel.
+**Pourquoi** : remplacer un manque par 0 fausserait les moyennes. Une année entière sans donnée (panne de l'API, modèle incomplet) ferait baisser la moyenne comme si elle n'avait eu aucun jour de gel.
+
+**Où** : les fonctions de `calcul/indicateurs.py` ignorent les `None` ; `calcul/module_calcul.py` exclut les années vides. Cette exclusion est une proposition du pôle DEV, à valider par le pôle DATA : leur `calculer.py` compte toutes les années.
 
 ## D4 — Deux horizons de 10 ans
 
@@ -37,6 +54,8 @@
 **Décision** : référence **2011-2020**, projection **2041-2050** (table `dim_temps`).
 
 **Pourquoi** : c'est le choix du kit. Dix ans sont le minimum pour qu'une moyenne climatique ait un sens, et vingt ans doubleraient la consommation du quota Open-Meteo (environ 520 appels pondérés par commune au lieu de 1 040). Les réponses de l'API sont gardées en cache 30 jours.
+
+**Point ouvert (27/11)** : le travail du pôle DATA utilise quatre décennies (2000-2009, 2010-2019, 2030-2039, 2040-2049). La base partagée ne peut contenir qu'une seule version de `dim_temps` : à décider ensemble avant le déploiement. L'application accepte n'importe quel nombre de périodes ; elle compare la première et la dernière. Pour information, l'API fournit bien toute l'année 2050 (vérifié le 27/11) : la limite `ANNEE_MAX = 2049` de `openmeteo_client.py` est trop prudente.
 
 ## D5 — Un seul modèle : aucun indice de confiance affiché
 

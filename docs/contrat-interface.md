@@ -6,7 +6,7 @@
 | **Date** | 24 novembre 2026 |
 | **Équipe** | 04 — SAÉ 3.01 « Climat & Cultures » |
 | **Produit par** | pôle DEV (`app/Libraries/SeriesClimat.php`) |
-| **Utilisé par** | pôle DATA (calcul des indicateurs → `fact_indicateur`) |
+| **Utilisé par** | pôle DATA : module de calcul `calcul/module_calcul.py`, qui reçoit ces séries de l'application (format d'échange : `calcul/README.md`) |
 | **Remplace** | l'échantillon de J2 (`writable/series_echantillons/`), retiré : longitude erronée (16,44 au lieu de 1,44) et dates réécrites par Excel (`10/1/2026`) |
 
 **Frontière des rôles** : le pôle DEV livre les **séries** (une ligne par commune et par jour). Le pôle DATA en tire les **faits** (les indicateurs). Le test de ce contrat : le pôle DATA doit pouvoir calculer les jours de gel sur l'échantillon ci-dessous **sans poser de question au pôle DEV**.
@@ -85,7 +85,7 @@ Fichier : [`../tests/_support/Data/jeu-essais-series.csv`](../tests/_support/Dat
 |---|---|---|---|---|
 | 2015-01-01 | -5 | 2 | -1,5 | gel nominal |
 | 2015-01-02 | -1 | 6 | 2,5 | gel nominal |
-| 2015-01-03 | **0** | 8 | 4 | **journée exactement au seuil de gel** → compte |
+| 2015-01-03 | **0** | 8 | 4 | **journée exactement au seuil de gel** → ne compte pas (règle stricte `<`) |
 | 2015-01-04 | 0,5 | 9 | 4,8 | juste au-dessus du seuil → ne compte pas |
 | 2015-01-05 | *vide* | 7 | *vide* | **valeur manquante** → ignorée, jamais comptée comme gel |
 | 2015-07-01 | 18 | 38 | 28 | stress thermique |
@@ -99,14 +99,19 @@ Fichier : [`../tests/_support/Data/jeu-essais-series.csv`](../tests/_support/Dat
 
 | Indicateur | 2015 | 2016 | Moyenne 2011-2020 | Moyenne 2041-2050 |
 |---|---|---|---|---|
-| Jours de gel (`t_min ≤ 0`) | 3 (1 manquant) | 0 | **1,5** | **1,0** |
+| Jours de gel (`t_min < 0`) | 2 (1 manquant) | 0 | **1,0** | **1,0** |
 | Jours de stress (`t_max ≥ 35`) | 2 | 0 | **1,0** | **0,5** |
-| GDD (`Σ max(0, t_moy − 6)`) | 60,5 (1 manquant) | 16,5 | **38,5** | **12,0** |
+| GDD (`Σ max(0, (t_max + t_min) / 2 − 6)`) | 60,5 (1 manquant) | 16,5 | **38,5** | **12,0** |
 | Pluie (`Σ precip`) | 11,2 | 4,0 | **7,6** | **1,5** |
 
 Les années sans aucune donnée (2011-2014, 2017-2020…) sont **exclues** de la moyenne. Une année avec des données mais sans gel (2016) **compte pour 0**.
 
-Ces résultats sont vérifiés automatiquement par `tests/unit/IndicateursTest.php` (`php vendor/bin/phpunit`). Si on remplace `≤` par `<` dans la règle du gel, trois tests échouent : le test peut échouer, donc il teste quelque chose.
+Ces résultats sont vérifiés automatiquement des deux côtés :
+
+- **pôle DATA** : `python calcul/test_module_calcul.py` ;
+- **pôle DEV** : `tests/unit/ModuleCalculTest.php` (`php vendor/bin/phpunit`), qui envoie les mêmes séries au vrai module Python.
+
+Si on remplace `<` par `≤` dans la règle du gel, les deux jeux d'essais échouent : un test qui peut échouer teste vraiment quelque chose.
 
 ---
 
@@ -114,14 +119,15 @@ Ces résultats sont vérifiés automatiquement par `tests/unit/IndicateursTest.p
 
 Elles sont détaillées dans [`decisions.md`](decisions.md) :
 
-- **journée au seuil** : elle compte (`≤` pour le gel, `≥` pour la chaleur) ;
+- **journée au seuil** : règles du pôle DATA, `<` pour le gel et `≥` pour la chaleur (D2) ;
 - **valeur manquante** : journée ignorée et signalée, jamais remplacée par 0 ;
-- **horizons** : 2011-2020 (référence) et 2041-2050 (projection), 10 ans chacun.
+- **horizons** : 2011-2020 (référence) et 2041-2050 (projection), 10 ans chacun (D4, point ouvert avec le pôle DATA).
 
 ## 5. Historique
 
 | Version | Date | Changement |
 |---|---|---|
 | 1.0 | 2026-11-24 | Première version versionnée : colonnes du schéma en étoile, `id_commune`, dates ISO, valeurs manquantes vides, échantillon réel régénéré, jeu d'essais. |
+| 1.0 (révision) | 2026-11-27 | **Format des séries inchangé.** Les séries sont désormais transmises au module de calcul Python du pôle DATA. Résultats attendus du jeu d'essais recalculés avec les règles du pôle DATA : gel strict (2015 : 3 → 2 jours, moyenne 2011-2020 : 1,5 → 1,0), GDD à partir de `(t_max + t_min) / 2`. |
 
 Toute modification du format passe par une nouvelle version de ce document (1.1, 2.0…), annoncée aux deux pôles, et par la mise à jour de `SeriesClimat::VERSION_CONTRAT`.
