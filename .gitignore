@@ -128,3 +128,6 @@ _modules/*
 # Python (module de calcul DATA)
 __pycache__/
 *.pyc
+
+# Base SQLite locale (développement) : une base se construit, elle ne se versionne pas
+writable/*.db
