@@ -36,8 +36,8 @@ $source = $source === '' ? 'non sourcé' : $source;
         <p class="message alerte">Le seuil de gel de cette culture n'est pas renseigné dans le référentiel : l'indicateur ne peut pas être calculé.</p>
     <?php else: ?>
         <p><span class="etiquette">Seuil de gel de la culture : <?= fr_nombre($gel['valeur_seuil']) ?> °C</span></p>
-        <p class="discret">Pour chaque année, on compte les jours où la température minimale descend à
-            <?= fr_nombre($gel['valeur_seuil']) ?> °C ou en dessous. On obtient dix nombres par période,
+        <p class="discret">Pour chaque année, on compte les jours où la température minimale passe
+            strictement sous <?= fr_nombre($gel['valeur_seuil']) ?> °C. On obtient dix nombres par période,
             dont on fait la moyenne : c'est le nombre de jours de gel « par an » ci-dessous.</p>
 
         <?php $maxi = max(1, ...array_map(static fn ($p) => (float) $p['valeur'], $gel['periodes'])); ?>
@@ -121,6 +121,8 @@ $source = $source === '' ? 'non sourcé' : $source;
     </div>
     <p class="discret">Le cumul de chaleur est calculé sur l'année civile, pas sur le cycle de la culture :
         il sert à comparer les deux périodes, pas à prédire la date de maturité.</p>
+    <p class="discret">Les indicateurs sont calculés par le module du pôle DATA (<code>calcul/indicateurs.py</code>)
+        à partir des séries Open-Meteo ; seule leur moyenne par période est conservée.</p>
 
     <?php
     $manquants = 0;

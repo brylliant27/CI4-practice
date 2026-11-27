@@ -90,7 +90,7 @@ final class ServiceDiagnosticTest extends CIUnitTestCase
 
         $resultat = (new ServiceDiagnostic($this->api))->executer(self::SESSION_A, self::TOULOUSE, self::MAIS);
 
-        $this->assertFalse($resultat['indicateurs']['stress_thermique']['calculable']);
+        $this->assertFalse($resultat['indicateurs']['jours_stress']['calculable']);
         $this->seeNumRecords(6, 'fact_indicateur', ['id_session' => self::SESSION_A]);
     }
 
